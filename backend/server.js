@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 
 
 import UserModel from "./model/UserModel.js";
+import PostModel from "./model/PostModel.js";
 
 const app = express()
 
@@ -73,9 +74,40 @@ app.post('/auth/login', async (req, res) => {
     }
   })
 
+app.post('/blog/post', async (req, res) => {
+
+  try {
+
+    console.log(req.body);
+
+  const {
+     name,
+     preview,
+     description,
+     image,
+     tag 
+     } = req.body;
+
+    const newPost = new PostModel({
+      name,
+      preview,
+      description,
+      image,
+      tag 
+    });
+
+    await newPost.save();
+
+    res.status(201).json({message: "Пост создан"})
+  } catch (err) {
+    console.error('Ошибка при создании поста:',err)
+    res.status(500).json({message:"Ошибка сервера"})
+  }
+});
+
 app.listen(PORT, (err) => {
   if (err) {
-    console.log(err)
+    console.log(err);
   } else {
     console.log('Сервер работает на http://localhost:5000')
   }
