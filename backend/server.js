@@ -105,6 +105,23 @@ app.post('/blog/post', async (req, res) => {
   }
 });
 
+app.get('/blog/posts', async (req, res) => {
+  try {
+    const posts = await PostModel.find();
+
+    if (!posts || posts === 0) {
+     return res.status(400).json({message:"Ничего не найдено"}); 
+      console.log('Отсутствуют посты');
+    } 
+    
+    return res.status(200).json(posts);
+
+  } catch (err) { 
+    console.error(error); 
+    return res.status(500).json({message: "Ошибка сервера"});
+  }
+});
+
 app.listen(PORT, (err) => {
   if (err) {
     console.log(err);
