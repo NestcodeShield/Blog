@@ -1,0 +1,65 @@
+.Header {
+  width: 100%;
+  height: auto;
+  background-color: #3c3c3c;
+  margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: auto;
+  height: auto;
+}
+
+li {
+  width: auto;
+  height: auto;
+  list-style: none;
+}
+
+.search-block {
+  height: auto;
+  display: flex;
+  width: 35%;
+  max-width: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-block input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.nav-buttons, .auth-buttons {
+  background-color: #3c3c3c;
+  color: #ffffff;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.nav-buttons:hover {
+  background-color: #4d4d4d;
+}
+
+.auth-buttons:hover {
+  background-color: #4d4d4d;
+}

@@ -1,0 +1,29 @@
+.blog-page {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.blog-page h3 {
+  font-size: 30px;  
+  text-align: left;
+}
+
+.description {
+  color: #1c1c1c;
+  text-align: left;
+  line-height: 30px;
+  white-space: pre-line;
+  font-size: 18px;
+}
+
+.blog-page img {
+  height: 400px;
+}
+
+.createdAt {
+  display: flex;
+  align-items: flex-start;
+}

@@ -1,0 +1,31 @@
+.LoginForm {
+  margin-top: 100px;
+  width: auto;
+}
+
+form {
+  display: block;
+  width: auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 300px;
+}
+
+.submit {
+  width: 100%;
+}
+
+.changeForm {
+  border: none;
+  width: 100px;
+}
+

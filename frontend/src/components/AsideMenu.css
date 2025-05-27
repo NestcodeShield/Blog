@@ -1,0 +1,37 @@
+.AsideMenu {
+  position:fixed;
+  left: 10px;
+  top: 30px;
+  border-right: 1px rgba(128, 128, 128, 0.211) solid;
+  height: 100%;
+  padding-top: 50px;
+  z-index: 0;
+  padding-right: 3em;
+}
+
+.AsideMenu ul {
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.AsideMenu li {
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.AsideMenu a {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 40px 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.AsideMenu a:hover {
+  background-color: rgb(227, 232, 235);
+  font-weight: 500;
+}
