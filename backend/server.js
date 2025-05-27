@@ -105,6 +105,20 @@ app.post('/blog/post', async (req, res) => {
   }
 });
 
+app.get('/blog/posts/:id', async (req, res) => {
+
+  try {
+    const post = await PostModel.findById(req.params.id);
+
+    if (!post) 
+      return res.status(404).json({message: "Пост не найден!"});
+      res.json(post);
+
+  } catch (err) {
+    res.status(500).json({message:"Ошибка сервера"})
+  }
+});
+
 app.get('/blog/posts', async (req, res) => {
   try {
     const posts = await PostModel.find();

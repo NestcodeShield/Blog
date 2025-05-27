@@ -20,6 +20,12 @@ const PostSchema = new mongoose.Schema ({
     type: [String],
     required: true,
   },
+  likes: {
+    type: Number
+  },
+  dislikes: {
+    type: Number
+  }
 }, {
   timestamps: true
 });
