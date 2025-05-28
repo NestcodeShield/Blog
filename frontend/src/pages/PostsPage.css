@@ -1,10 +1,24 @@
 .blog-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* было 280px */
+  grid-template-columns: repeat(2, minmax(320px, 400px)); /* было 280px */
   gap: 12px;
   padding: 0 20px;
   margin-top: 100px;
   justify-items: stretch;
+  margin-left: 100px;
+}
+
+@media (max-width: 870px) {
+  .blog-list {
+    grid-template-columns: repeat(1, minmax(320px, 400px)); /* было 280px */
+  }
+}
+
+
+@media (max-width: 450px) {
+  .blog-list {
+    margin-left: 0;
+  }
 }
 
 
@@ -48,8 +62,9 @@
   overflow: hidden;
 }
 
-h3 {
+.post-block h3 {
   margin: 0;
+  height: 50px;
 }
 
 
@@ -67,7 +82,7 @@ h3 {
 
 .tag {
   color: white;
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(239, 68, 0);
   padding: 2px 14px;
   border-radius: 16px;
   display: flex;

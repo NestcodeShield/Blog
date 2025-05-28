@@ -1,7 +1,9 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
+import AuthModal from './AuthModal';
+import { ReactComponent as UserIcon } from '../icons/user-icon.svg';
 
-function Header() {
+function Header({ setIsModalOpen, isModalOpen}) {
   return (
     <div className="Header">
       <header>
@@ -13,8 +15,7 @@ function Header() {
             <input type='search' placeholder='Search'/>
           </div>
           <ul>
-            <li><Link to="auth/login" className='auth-buttons'>Вход</Link></li>
-            <li><Link to="auth/register" className='auth-buttons'>Регистрация</Link></li>
+             <button onClick={() => setIsModalOpen(prev => !prev)} className='auth-buttons'><UserIcon className='user-icon'/></button>
           </ul>
         </nav>
       </header>

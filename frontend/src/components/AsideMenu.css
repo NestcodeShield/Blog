@@ -1,37 +1,81 @@
 .AsideMenu {
-  position:fixed;
-  left: 10px;
-  top: 30px;
-  border-right: 1px rgba(128, 128, 128, 0.211) solid;
+  position: fixed;
+  top: 40px;
+  left: 0;
   height: 100%;
-  padding-top: 50px;
+  width: 200px;
+  background-color: rgb(248, 248, 248);
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  padding-top: 3em;
+  transition: width 0.3s ease;
   z-index: 0;
-  padding-right: 3em;
 }
 
 .AsideMenu ul {
-  padding: 0 0 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .AsideMenu li {
-  display: flex;
-  width: auto;
-  height: auto;
+  margin-bottom: 10px;
 }
 
 .AsideMenu a {
-  color: black;
-  text-decoration: none;
-  font-size: 17px;
-  padding: 10px 40px 10px 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
   border-radius: 10px;
-  width: 100%;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .AsideMenu a:hover {
   background-color: rgb(227, 232, 235);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s;
+  color: black;
+}
+
+.AsideMenu a:hover .icon {
+  color: orangered;
+}
+
+.link-text {
+  margin-left: 15px;
+  font-size: 16px;
   font-weight: 500;
+  color: black;
+  transition: color 0.3s;
+}
+
+.AsideMenu a:hover .link-text {
+  color: orangered;
+}
+
+/* Адаптация — скрыть текст при узком экране */
+@media (max-width: 1120px) {
+  .AsideMenu {
+    width: 60px;
+  }
+
+  .link-text {
+    display: none;
+  }
+
+  .AsideMenu a {
+    justify-content: center;
+  }
+}
+
+/* Полностью скрыть aside на очень маленьком экране */
+@media (max-width: 450px) {
+  .AsideMenu {
+    display: none;
+  }
 }

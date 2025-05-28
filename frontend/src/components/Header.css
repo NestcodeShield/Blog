@@ -8,12 +8,13 @@
   z-index: 1;
 }
 
+
 nav {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
 ul {
@@ -22,12 +23,15 @@ ul {
   gap: 20px;
   width: auto;
   height: auto;
+  padding-right: 40px;
 }
 
 li {
+  display: flex;
   width: auto;
   height: auto;
   list-style: none;
+  align-items: center;
 }
 
 .search-block {
@@ -51,9 +55,9 @@ li {
 .nav-buttons, .auth-buttons {
   background-color: #3c3c3c;
   color: #ffffff;
-  padding: 5px 10px;
   text-decoration: none;
   transition-duration: 0.2s;
+  border: none;
 }
 
 .nav-buttons:hover {
@@ -62,4 +66,16 @@ li {
 
 .auth-buttons:hover {
   background-color: #4d4d4d;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.user-icon {
+  width: 35px;
+  height: 35px;
 }

@@ -7,8 +7,16 @@
 }
 
 form {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.Editor input {
+  width: 450px;
+}
+
+.Editor textarea {
+  width: 450px;
 }
